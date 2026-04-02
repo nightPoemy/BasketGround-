@@ -1,25 +1,22 @@
 
-# 🏀 BasketGround: A Multi-dimensional Vision-Language Dataset for
+# 🏀 BasketGround: A Multi-dimensional Vision-Language Dataset for Basketball Video Analysis
 Basketball Video Analysis
-
-<p align="center">
-  <b>Cross-architecture Knowledge Distillation for Lightweight Video Models</b><br>
-  A Large-Scale Benchmark for Fine-Grained Basketball Video Understanding
-</p>
 
 ---
 
 ## 📌 Overview
 
-We present **BASKET**, a large-scale dataset for **visual-evidence-based spatio-temporal grounding** in basketball videos.
+We present **BASKETGROUND**, a dataset for **Fine-grained Video Analysis** in basketball videos.
 
-Unlike existing datasets, BASKET focuses on **fine-grained semantic understanding** in highly dynamic, multi-player sports scenarios. Each sample requires models to jointly reason about:
+Unlike existing datasets, BASKET focuses on fine-grained semantic understanding in highly dynamic, multi-player sports scenarios. 
 
-- 🧑 Player identity  
-- 🏀 Actions and interactions  
-- 📍 Spatial-temporal localization  
+Each instance in BASKET is annotated with rich visual and semantic information, including:
 
-This benchmark introduces significant challenges due to **occlusions, viewpoint changes, and similar appearances among players**, making it a strong testbed for multimodal reasoning.
+- 🧑 Player identity (name, team affiliation, jersey color and number)  
+- 🏀 Fine-grained actions and player interactions  
+- 📍 Spatial-temporal localization (bounding boxes and temporal segments)
+- 🎽 Comprehensive captions   
+This benchmark introduces significant challenges due to **occlusions, short duration, and similar appearances among players**, making it a strong testbed for multimodal reasoning.
 
 ---
 
@@ -28,18 +25,11 @@ This benchmark introduces significant challenges due to **occlusions, viewpoint 
 - 🔹 **Multi-entity reasoning**: identity + action + spatial grounding  
 - 🔹 **Fine-grained annotations**: player name, team, jersey color, number  
 - 🔹 **Challenging scenarios**: occlusion, fast motion, multi-player interaction  
-- 🔹 **Evaluation protocols**: VEA, mTIoU, mVIoU  
-- 🔹 **Real-world basketball games**
+- 🔹 **Compositional Semantics** 
+- 🔹 **Annotation Reliability**
 
 ---
 
-## 📊 Dataset Statistics
-
-| Split | Videos | Samples | Annotations |
-|------|--------|--------|------------|
-| Train | XXX | XXX | XXX |
-| Val   | XXX | XXX | XXX |
-| Test  | XXX | XXX | XXX |
 
 > 📌 *Detailed statistics will be updated upon release.*
 
@@ -47,14 +37,14 @@ This benchmark introduces significant challenges due to **occlusions, viewpoint 
 
 ## 🧠 Task Definition
 
-### 🔹 Task 1: Attribute Prediction
+### 🔹 Task 1: Fine-grained Multi-dimensional Semantic Understanding
 Predict player-related attributes:
 - Player Name
 - Team
 - Jersey Color
 - Jersey Number
 
-### 🔹 Task 2: Spatio-Temporal Grounding
+### 🔹Task 2: Visual-Evidence-Based Spatio-Temporal Video Grounding
 Given a textual query, localize:
 - ⏱ Temporal segment  
 - 📦 Spatial region  
